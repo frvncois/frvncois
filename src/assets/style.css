@@ -6,9 +6,6 @@
   --is-select: #4b4b4b16;
   --is-foreground: #2b2a2a;
 
-  /* Color transition */
-  transition: background-color 0.8s ease, color 0.8s ease;
-
   /* Font sizes */
   --font-base: 1em;
   --font-medium: 2em;
@@ -114,8 +111,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease;
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -136,7 +132,6 @@ body {
   font-size: 15px;
   margin: 0 var(--space-lg);
   overflow-x: hidden;
-  transition: background-color 0.8s ease, color 0.8s ease;
 }
 
 html.lenis, html.lenis body {
