@@ -59,28 +59,34 @@ ScrollTrigger.scrollerProxy(document.body, {
 // Theme switching on loop detection
 const { setTheme, getNextTheme } = useTheme()
 let lastScroll = 0
+let lastDirection = 0
 let isLooping = false
 
 // Use a separate scroll listener for loop detection (throttled)
 const checkForLoop = () => {
   const currentScroll = lenis.scroll
   const delta = currentScroll - lastScroll
-  
-  // Detect wrap-around: large negative jump (scrolled past end, wrapped to start)
-  // or large positive jump (scrolled past start, wrapped to end)
-  const wrapThreshold = lenis.limit * 0.5
-  
-  if (Math.abs(delta) > wrapThreshold && !isLooping) {
+  const currentDirection = Math.sign(delta)
+
+  // Detect wrap-around by checking for direction change AND large jump
+  const wrapThreshold = lenis.limit * 0.3
+  const hasDirectionChange = lastDirection !== 0 && currentDirection !== 0 && lastDirection !== currentDirection
+  const hasLargeJump = Math.abs(delta) > wrapThreshold
+
+  if (hasLargeJump && hasDirectionChange && !isLooping) {
     isLooping = true
     setTheme(getNextTheme())
-    
+
     // Debounce to prevent multiple triggers
     setTimeout(() => {
       isLooping = false
-    }, 500)
+    }, 1000)
   }
-  
+
   lastScroll = currentScroll
+  if (Math.abs(delta) > 1) {
+    lastDirection = currentDirection
+  }
 }
 
 // Throttled loop check
