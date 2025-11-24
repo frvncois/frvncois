@@ -123,8 +123,6 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   height: 100%;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
 }
 
 html::-webkit-scrollbar {
@@ -139,7 +137,6 @@ body {
   margin: 0 var(--space-lg);
   overflow-x: hidden;
   transition: background-color 0.8s ease, color 0.8s ease;
-  touch-action: pan-y;
 }
 
 html.lenis, html.lenis body {
