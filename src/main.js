@@ -33,7 +33,12 @@ const lenis = new Lenis({
   wheelMultiplier: 1,
   touchMultiplier: 1.5,
   autoRaf: false,
+  wrapper: window,
+  content: document.documentElement,
 })
+
+// Add lenis class to html element for CSS
+document.documentElement.classList.add('lenis')
 
 // Connect Lenis to ScrollTrigger
 lenis.on('scroll', ScrollTrigger.update)
