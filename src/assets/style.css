@@ -1,0 +1,159 @@
+:root {
+  /* Colors */
+  --is-background: #FFF;
+  --is-light: #fafafa88;
+  --is-muted: #ecececd8;
+  --is-select: #4b4b4b16;
+  --is-foreground: #2b2a2a;
+
+  /* Color transition */
+  transition: background-color 0.8s ease, color 0.8s ease;
+
+  /* Font sizes */
+  --font-base: 1em;
+  --font-medium: 2em;
+  --font-large: 3.5vw;
+  --font-big: 6vw;
+  --font-xbig: 25vw;
+
+  /* Spacing scale - em-based for relative sizing */
+  --space-micro: 0.125em;
+  --space-tiny: 0.25em;
+  --space-small: 0.3em;
+  --space-xs: 0.5em;
+  --space-sm: 0.75em;
+  --space-base: 1em;
+  --space-md: 1.5em;
+  --space-lg: 2em;
+  --space-xl: 4em;
+
+  --grid-layout: repeat(10, 1fr);
+
+  @media (max-width: 1080px) {
+    --grid-layout: repeat(2, 1fr);
+    --font-large: 5vw;
+    --font-big: 14.75vw;
+    --font-xbig: 45vw;
+  }
+
+  /* Viewport heights */
+  --vh-quarter: 25vh;
+  --vh-half: 50vh;
+  --vh-full: 100vh;
+
+  /* Borders */
+  --border-thin: 1px;
+
+  /* Border radius */
+  --radius-sm: 0.5em;
+  --radius-md: 0.75em;
+  --radius-full: 100%;
+
+  /* Content widths */
+  --content-narrow: 15ch;
+  --content-medium: 45ch;
+
+  /* Shadows */
+  --shadow-context: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 0.2s;
+  --transition-base: 0.25s;
+  --transition-slow: 0.3s;
+
+  /* Component sizes */
+  --icon-size: 1.5em;
+  --menu-min-width: 150px;
+  --blur-amount: 10px;
+}
+
+/* DARK THEME */
+.dark {
+  --is-background: #151515;
+  --is-light: #1a1a1aee;
+  --is-muted: #2b2b2bcc;
+  --is-select: #ffffff10;
+  --is-foreground: #fafafa;
+}
+
+/* RED THEME */
+.red {
+  --is-background: #e53525;
+  --is-light: #c0181823;
+  --is-muted: #cb22227a;
+  --is-select: #ff000010;
+  --is-foreground: #e3c7a2;
+}
+
+/* YELLOW THEME */
+.yellow {
+  --is-background: #2d2d0a;
+  --is-light: #3d3d1a41;
+  --is-muted: #4d4d2589;
+  --is-select: #ffff0010;
+  --is-foreground: #d0596d;
+}
+
+@font-face {
+  font-family: 'body';
+  src: url(fonts/body.ttf);
+}
+
+@font-face {
+  font-family: 'accent';
+  src: url(fonts/accent.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: var(--is-background);
+  color: var(--is-foreground);
+  font-family: 'body';
+  font-size: 15px;
+  margin: 0 var(--space-lg);
+  overflow-x: hidden;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+address {
+
+  font-style: normal;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: var(--space-base);
+  font-weight: normal;
+  line-height: 0.9;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
