@@ -1,24 +1,16 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useTheme } from '@/stores/useTheme.js'
-import { useFormBlock } from '@/stores/useFormBlock.js'
 import IconTheme from '@/assets/icons/IconTheme.vue'
 import IconCode from '@/assets/icons/IconCode.vue'
-import IconHelp from '@/assets/icons/IconHelp.vue'
 
 const { theme, setTheme } = useTheme()
-const { showFormBlock } = useFormBlock()
 
 // Emits
 const emit = defineEmits(['navigate'])
 
 const toggleTheme = () => {
   setTheme(theme.value === 'light' ? 'dark' : 'light')
-  visible.value = false
-}
-
-const openHelp = () => {
-  showFormBlock()
   visible.value = false
 }
 
@@ -76,7 +68,6 @@ const go = (item) => {
     </li>
 
     <li @click="go('github')"><IconCode/> Inspect code</li>
-    <li @click="openHelp"><IconHelp/> Help</li>
   </ul>
 </template>
 

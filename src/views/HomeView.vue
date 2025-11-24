@@ -9,11 +9,7 @@ import GridLayout from '@/components/layout/GridLayout.vue'
 import ServicesBlock from '@/components/blocks/ServicesBlock.vue'
 import SeparatorVertical from '@/components/layout/SeparatorVertical.vue'
 import CTABlock from '@/components/blocks/CTABlock.vue'
-import FormBlock from '@/components/blocks/FormBlock.vue'
-import { useFormBlock } from '@/stores/useFormBlock.js'
 import NoiseOverlay from '@/components/items/NoiseOverlay.vue'
-
-const { isFormBlockVisible, hideFormBlock } = useFormBlock()
 </script>
 
 <template>
@@ -41,7 +37,5 @@ const { isFormBlockVisible, hideFormBlock } = useFormBlock()
   <CTABlock />
 
   <HeroBlock />
-
-  <FormBlock v-if="isFormBlockVisible" @close="hideFormBlock" />
 
 </template>
