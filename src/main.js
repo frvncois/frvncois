@@ -17,18 +17,22 @@ app.use(createPinia())
 app.use(router)
 app.mount('#app')
 
-// Initialize Lenis with optimized settings for infinite scroll
+// Detect if we're on a touch device
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+
+// Initialize Lenis with optimized settings
+// Note: infinite scroll requires smoothTouch to work on mobile
 const lenis = new Lenis({
-  duration: 1.2,              // Longer duration for smoother feel
+  duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   orientation: 'vertical',
   gestureOrientation: 'vertical',
   smoothWheel: true,
-  smoothTouch: true,
+  smoothTouch: isTouchDevice,  // Must be true for infinite to work on touch devices
   infinite: true,
-  wheelMultiplier: 1,         // Reduced from 2 - less aggressive
-  touchMultiplier: 2,
-  autoRaf: false,             // CRITICAL: Disable internal RAF since we use GSAP ticker
+  wheelMultiplier: 1,
+  touchMultiplier: 1.5,
+  autoRaf: false,
 })
 
 // Connect Lenis to ScrollTrigger
