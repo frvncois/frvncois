@@ -24,7 +24,7 @@ const lenis = new Lenis({
   orientation: 'vertical',
   gestureOrientation: 'vertical',
   smoothWheel: true,
-  smoothTouch: false,         // Keep false for better touch performance
+  smoothTouch: true,
   infinite: true,
   wheelMultiplier: 1,         // Reduced from 2 - less aggressive
   touchMultiplier: 2,
