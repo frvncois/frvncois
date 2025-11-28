@@ -210,7 +210,7 @@ article {
       }
       &:nth-child(2) {
         grid-column: span 6;
-        grid-row: span 6;
+        grid-row: span 10;
         aspect-ratio: 4 / 3;
         background: var(--is-foreground);
       }
