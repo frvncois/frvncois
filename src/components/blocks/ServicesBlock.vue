@@ -170,7 +170,7 @@ ul {
     color: var(--is-foreground);
     background: var(--is-background);
     padding: var(--space-lg);
-    width: 50vw;
+    width: 40vw;
     aspect-ratio: 1;
     > h2 {
       z-index: 1;
@@ -214,10 +214,7 @@ ul {
     overflow: hidden;
     & > div {
       & > h3 {
-          writing-mode: vertical-rl;
-          text-orientation: upright;
-          letter-spacing: -0.28em;
-          margin-top: -0.75em;
+          opacity: 0;
       }
     }
   }
