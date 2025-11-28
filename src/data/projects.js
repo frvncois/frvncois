@@ -6,7 +6,7 @@ export default [
     cms: "Strapi",
     design: "Hugo Le Bihan",
     frontend: ["Vue JS3"],
-    backend: [],
+    backend: ["Node JS"],
     animations: ["GSAP"],
     deploy: "Vercel",
     website: "",
@@ -20,6 +20,28 @@ export default [
       "/assets/studio-off/02.mp4"
     ]
   },
+{
+  title: "Bzoing",
+  category: "Développement",
+  year: 2025,
+  cms: "Strapi",
+  agency: "Bzoing",
+  design: "Marc-Oliver Leroux",
+  frontend: ["Vue JS3"],
+  backend: ["Node JS"],
+  deploy: "Vercel",
+  website: "https://bzoing.ca",
+  status: "",
+  intro:
+    "Studio de création graphique montréalais spécialisé en développement de marque. Nous privilégions des relations humaines et durables, accompagnant nos clients dans leurs projets ambitieux depuis plusieurs années.",
+  description:
+    "Développement complet du site en Vue 3 avec intégration Strapi pour la gestion de contenu. Architecture headless performante, routage dynamique et sécurisation des endpoints. Animations GSAP fluides pour une expérience utilisateur soignée et déploiement optimisé sur Vercel.",
+    images: [
+      "/assets/bzoing/01.png",
+      "/assets/bzoing/02.png",
+      "/assets/bzoing/03.png",
+    ]
+  },
 
   {
     title: "Cheers Cannabis",
@@ -29,7 +51,7 @@ export default [
     agency: "Bzoing",
     design: "Victor Martin",
     frontend: ["Vue JS3"],
-    backend: [],
+    backend: ["Node JS"],
     animations: [],
     deploy: "Vercel",
     website: "https://cheerscannabis.com",
@@ -73,7 +95,7 @@ export default [
     category: "Product design, Développement",
     year: 2025,
     frontend: ["Vue JS3", "ShadCN", "Tailwind"],
-    backend: [],
+    backend: ["Node JS"],
     animations: [],
     deploy: "Vercel",
     website: "",
@@ -108,7 +130,7 @@ export default [
     year: 2024,
     cms: "Custom",
     frontend: ["Vue JS3"],
-    backend: [],
+    backend: ["Node JS"],
     animations: [],
     deploy: "Firebase",
     website: "https://inverse-uqam.ca",
