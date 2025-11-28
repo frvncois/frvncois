@@ -220,6 +220,7 @@ article {
       &:last-child {
         grid-column: span 4;
         font-size: var(--font-medium);
+        margin-bottom: var(--space-sm);
       }
     }
   }
