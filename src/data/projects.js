@@ -151,7 +151,7 @@ export default [
     frontend: ["Custom frontend"],
     backend: ["Laravel", "WordPress"],
     animations: ["GSAP"],
-    website: "https://lexapien.ca",
+    website: "https://lexapien.com",
     intro:
       "Plateforme moderne de formation juridique axée sur la conformité et les enjeux technologiques. Modules courts, visuels et dynamiques conçus pour offrir aux organisations un apprentissage clair, engageant et adapté aux besoins actuels.",
     description:
@@ -172,7 +172,7 @@ export default [
     frontend: ["Webflow"],
     backend: [],
     animations: [],
-    website: "https://jesuisunenterrible.com",
+    website: "https://jesuisunenfantterrible.com",
     intro:
       "Brasserie québécoise emblématique alliant cuisine française, produits locaux et ambiance chaleureuse. Chaque adresse célèbre la convivialité, la générosité et une gastronomie moderne pensée pour créer des moments mémorables à partager.",
     description:

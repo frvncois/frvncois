@@ -1,5 +1,4 @@
 <script setup>
-import ContextMenu from '@/components/items/ContextMenu.vue'
 import ContactBlock from '@/components/blocks/ContactBlock.vue'
 import HeroBlock from '@/components/blocks/HeroBlock.vue'
 import InfoBlock from '@/components/blocks/InfoBlock.vue'
@@ -13,9 +12,6 @@ import NoiseOverlay from '@/components/items/NoiseOverlay.vue'
 </script>
 
 <template>
-
-
-  
   <NoiseOverlay />
 
   <GridLayout />

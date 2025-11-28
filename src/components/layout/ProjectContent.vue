@@ -106,7 +106,7 @@ onBeforeUnmount(() => {
         <p>{{ project.intro }}</p>
         <p v-if="project.description">{{ project.description }}</p>
       </li>
-      <li v-if="project.videos && project.videos.length > 0" class="video-container">
+      <li v-if="project.videos && project.videos.length > 0">
         <video
           v-for="(videoSrc, index) in project.videos"
           :key="index"
@@ -118,7 +118,7 @@ onBeforeUnmount(() => {
           @ended="handleVideoEnded"
         />
       </li>
-      <li v-else-if="project.images && project.images.length > 0" class="image-container">
+      <li v-else-if="project.images && project.images.length > 0">
         <img
           v-for="(imageSrc, index) in project.images"
           :key="index"
@@ -179,7 +179,6 @@ article {
   transition: max-height var(--transition-slow) ease,
               opacity var(--transition-fast) ease;
   > ul {
-    display: flex;
     display: grid;
     grid-template-columns: var(--grid-layout);
     gap: var(--space-base);
@@ -224,5 +223,14 @@ article {
       }
     }
   }
+}
+
+@media (max-width: 1080px) {
+article {
+  & > ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
 }
 </style>

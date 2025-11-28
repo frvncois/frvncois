@@ -194,7 +194,7 @@ span {
   }
   header:hover li,
   header[data-expanded="true"] li {
-    height: 10vw;
+    height: 16vw;
   }
   span {
     display: none;
