@@ -55,7 +55,7 @@ onMounted(() => {
   const section = wrap.value
   const trackEl = track.value
   const cards = trackEl.querySelectorAll('li')
-  const servicesTitle = trackEl.querySelector('div h3')
+  const servicesTitle = section.querySelector('.services-title')
   const isMobile = window.matchMedia('(max-width: 1080px)').matches
 
   // Set initial rotated state for all cards (centered)
@@ -120,10 +120,10 @@ onMounted(() => {
 
 <template>
   <section ref="wrap">
+    <div class="services-title">
+      <span>Modules</span>
+    </div>
     <ul ref="track">
-      <div>
-        <h3>Modules</h3>
-      </div>
       <li class="card-1" :style="{ zIndex: card1ZIndex }">
         <h2>Site Vitrine</h2>
         <h2>Website</h2>
@@ -186,38 +186,37 @@ ul {
       }
     }
   }
-  > div {
-    position: absolute;
-    top: var(--space-xl);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 6;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    > h3 {
-      font-family: 'accent', sans-serif;
-      text-transform: lowercase;
-      letter-spacing: -0.2em;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--is-foreground);
-      color: var(--is-background);
-      font-size: var(--font-xbig);
-      margin-top: -0.125em;
-    }
+}
+
+.services-title {
+  position: absolute;
+  top: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  > span {
+    font-family: 'accent', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: -0.2em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--is-foreground);
+    color: var(--is-background);
+    font-size: var(--font-xbig);
+    margin-top: -0.125em;
   }
 }
 
 @media (max-width: 1080px) {
   ul {
     overflow: hidden;
-    & > div {
-      & > h3 {
-          opacity: 0;
-      }
-    }
+  }
+  .services-title > span {
+    opacity: 0;
   }
 }
 </style>

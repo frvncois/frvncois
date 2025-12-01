@@ -9,12 +9,12 @@ defineProps({
 
 <template>
     <ul>
-        <li><h1>{{ h1 }}</h1></li>
+        <li><span>{{ h1 }}</span></li>
         <li>
-            <h2 v-if="!link">{{ h2 }}</h2>
-            <a v-else :href="link"><h2>{{ h2 }}</h2></a>
+            <span v-if="!link">{{ h2 }}</span>
+            <a v-else :href="link">{{ h2 }}</a>
         </li>
-        <li><h3>{{ h3 }}</h3></li>
+        <li><span>{{ h3 }}</span></li>
     </ul>
 </template>
 
@@ -49,7 +49,7 @@ li:nth-child(3) {
   }
     }
 
-    li:nth-child(3):has(h3:empty) {
+    li:nth-child(3):has(span:empty) {
   display: none;
 }
 

@@ -94,11 +94,13 @@
 @font-face {
   font-family: 'body';
   src: url(fonts/body.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'accent';
   src: url(fonts/accent.ttf);
+  font-display: swap;
 }
 
 * {

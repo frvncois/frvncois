@@ -6,7 +6,7 @@ import FooterLayout from '@/components/layout/FooterLayout.vue';
   <footer>
     <ul>
         <li>
-            <h4>Contact</h4>
+            <h2>Contact</h2>
         </li>
         <li>
             <FooterLayout
@@ -38,7 +38,7 @@ ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      & h4 {
+      & h2 {
         margin-bottom: var(--space-micro);
         font-size: var(--font-big);
         text-transform: uppercase;

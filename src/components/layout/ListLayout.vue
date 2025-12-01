@@ -15,7 +15,7 @@ defineProps({
     </li>
 
     <li v-for="(item, i) in items" :key="i">
-      <h4>{{ item.title }}</h4>
+      <span class="list-title">{{ item.title }}</span>
 
       <ul>
 <li v-for="(skill, j) in item.content" :key="j">
