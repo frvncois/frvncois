@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Shape01 from '@/assets/shapes/Shape01.vue'
@@ -17,57 +17,54 @@ const activeCard = ref(null)
 
 const handleCard1Click = () => {
   if (activeCard.value === 1) return
-
-  // Reset previously active card to original z-index
   if (activeCard.value === 2) card2ZIndex.value = 1
   if (activeCard.value === 3) card3ZIndex.value = 2
-
-  // Set current card to z-index 5
   card1ZIndex.value = 5
   activeCard.value = 1
 }
 
 const handleCard2Click = () => {
   if (activeCard.value === 2) return
-
-  // Reset previously active card to original z-index
   if (activeCard.value === 1) card1ZIndex.value = 3
   if (activeCard.value === 3) card3ZIndex.value = 2
-
-  // Set current card to z-index 5
   card2ZIndex.value = 5
   activeCard.value = 2
 }
 
 const handleCard3Click = () => {
   if (activeCard.value === 3) return
-
-  // Reset previously active card to original z-index
   if (activeCard.value === 1) card1ZIndex.value = 3
   if (activeCard.value === 2) card2ZIndex.value = 1
-
-  // Set current card to z-index 5
   card3ZIndex.value = 5
   activeCard.value = 3
 }
 
-onMounted(() => {
+let currentTimeline = null
+let currentTrigger = null
+const mobileQuery = window.matchMedia('(max-width: 1080px)')
+
+const setupAnimation = () => {
+  if (currentTrigger) {
+    currentTrigger.kill()
+  }
+  if (currentTimeline) {
+    currentTimeline.kill()
+  }
+
   const section = wrap.value
   const trackEl = track.value
+  if (!section || !trackEl) return
+
   const cards = trackEl.querySelectorAll('li')
-  const servicesTitle = section.querySelector('.services-title')
-  const isMobile = window.matchMedia('(max-width: 1080px)').matches
+  const servicesTitle = trackEl.querySelector('div span')
+  const isMobile = mobileQuery.matches
 
-  // Set initial rotated state for all cards (centered)
-  gsap.set(cards[0], { rotation: -35, transformOrigin: 'center' })
-  gsap.set(cards[1], { rotation: -18, transformOrigin: 'center' })
-  gsap.set(cards[2], { rotation: 14, transformOrigin: 'center' })
-
-  // Set initial display none for services title
+  gsap.set(cards[0], { rotation: -35, transformOrigin: 'center', x: 0, y: 0 })
+  gsap.set(cards[1], { rotation: -18, transformOrigin: 'center', x: 0, y: 0 })
+  gsap.set(cards[2], { rotation: 14, transformOrigin: 'center', x: 0, y: 0 })
   gsap.set(servicesTitle, { display: 'none' })
 
-  // Create timeline for all animations
-  const tl = gsap.timeline({
+  currentTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: section,
       start: 'top top',
@@ -77,9 +74,10 @@ onMounted(() => {
     }
   })
 
-  // Card animations start immediately (position 0)
+  currentTrigger = currentTimeline.scrollTrigger
+
   if (isMobile) {
-    tl.to(cards[0], {
+    currentTimeline.to(cards[0], {
       rotation: -10,
       y: '-33.33vh',
       ease: 'none',
@@ -94,7 +92,7 @@ onMounted(() => {
       ease: 'none',
     }, 0)
   } else {
-    tl.to(cards[0], {
+    currentTimeline.to(cards[0], {
       rotation: -10,
       x: '-33.33vw',
       ease: 'none',
@@ -110,20 +108,34 @@ onMounted(() => {
     }, 0)
   }
 
-  // Show services title at 50% progress
-  tl.to(servicesTitle, {
+  currentTimeline.to(servicesTitle, {
     display: 'inline',
     ease: 'none',
   }, 0.5)
+}
+
+const handleResize = () => {
+  setupAnimation()
+}
+
+onMounted(() => {
+  setupAnimation()
+  mobileQuery.addEventListener('change', handleResize)
+})
+
+onBeforeUnmount(() => {
+  mobileQuery.removeEventListener('change', handleResize)
+  if (currentTrigger) currentTrigger.kill()
+  if (currentTimeline) currentTimeline.kill()
 })
 </script>
 
 <template>
   <section ref="wrap">
-    <div class="services-title">
-      <span>Modules</span>
-    </div>
     <ul ref="track">
+      <div>
+        <span>Modules</span>
+      </div>
       <li class="card-1" :style="{ zIndex: card1ZIndex }">
         <h2>Site Vitrine</h2>
         <h2>Website</h2>
@@ -171,7 +183,7 @@ ul {
     color: var(--is-foreground);
     background: var(--is-background);
     padding: var(--space-lg);
-    width: 40vw;
+    width: 50vw;
     aspect-ratio: 1;
     > h2 {
       z-index: 1;
@@ -186,37 +198,38 @@ ul {
       }
     }
   }
-}
-
-.services-title {
-  position: absolute;
-  top: var(--space-xl);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 6;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  > span {
-    font-family: 'accent', sans-serif;
-    text-transform: lowercase;
-    letter-spacing: -0.2em;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--is-foreground);
-    color: var(--is-background);
-    font-size: var(--font-xbig);
-    margin-top: -0.125em;
+  > div {
+    position: absolute;
+    top: var(--space-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    > span {
+      font-family: 'accent', sans-serif;
+      text-transform: lowercase;
+      letter-spacing: -0.2em;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--is-foreground);
+      color: var(--is-background);
+      font-size: var(--font-xbig);
+      margin-top: -0.125em;
+    }
   }
 }
 
 @media (max-width: 1080px) {
   ul {
     overflow: hidden;
-  }
-  .services-title > span {
-    opacity: 0;
+    & > div {
+      & > span {
+          opacity: 0;
+      }
+    }
   }
 }
 </style>

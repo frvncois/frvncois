@@ -37,7 +37,6 @@ const handleVideoEnded = () => {
   if (currentVideoIndex.value < props.project.videos.length) {
     playCurrentVideo()
   } else {
-    // Loop back to first video
     currentVideoIndex.value = 0
     playCurrentVideo()
   }
@@ -69,7 +68,6 @@ watch(
       content.value.style.maxHeight = content.value.scrollHeight + 'px'
       content.value.style.opacity = '1'
 
-      // Start playing videos or images when content opens
       nextTick(() => {
         if (props.project.videos) {
           currentVideoIndex.value = 0
@@ -82,12 +80,10 @@ watch(
       content.value.style.maxHeight = '0px'
       content.value.style.opacity = '0'
 
-      // Pause all videos when closing
       videoRefs.value.forEach(video => {
         if (video) video.pause()
       })
 
-      // Stop image slideshow
       stopImageSlideshow()
     }
     content.value.addEventListener('transitionend', handleTransitionEnd, { once: true })

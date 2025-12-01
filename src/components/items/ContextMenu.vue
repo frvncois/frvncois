@@ -6,7 +6,6 @@ import IconCode from '@/assets/icons/IconCode.vue'
 
 const { theme, setTheme } = useTheme()
 
-// Emits
 const emit = defineEmits(['navigate'])
 
 const toggleTheme = () => {
@@ -18,14 +17,12 @@ const toggleTheme = () => {
 const visible = ref(false)
 const pos = ref({ x: 0, y: 0 })
 
-// Open menu at click position
 const open = (event) => {
   event.preventDefault()
   visible.value = true
   pos.value = { x: event.clientX, y: event.clientY }
 }
 
-// Close menu
 const close = () => {
   visible.value = false
 }
@@ -40,7 +37,6 @@ onBeforeUnmount(() => {
   document.removeEventListener('click', close)
 })
 
-// Navigation handler
 const go = (item) => {
   if (item === 'github') {
     window.open('https://github.com/frvncois', '_blank')

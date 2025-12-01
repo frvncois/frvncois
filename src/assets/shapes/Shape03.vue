@@ -94,12 +94,12 @@ const handleClick = () => {
 .line-1 {
   top: 0;
   right: 0;
-  transform: rotate(-45deg) scaleY(1.414);
+  transform: rotate(-45deg);
 }
 
 .line-2 {
   bottom: 0;
   left: 0;
-  transform: rotate(-45deg) scaleY(1.414);
+  transform: rotate(-45deg);
 }
 </style>

@@ -28,7 +28,7 @@ ul > li {
         margin-top: var(--vh-half);
     }
     &:last-child {
-        padding-bottom: var(--vh-half);
+        padding-bottom: var(--vh-quarter);
     }
 }
 

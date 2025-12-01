@@ -10,18 +10,17 @@ const circles = ref([])
 const section = ref(null)
 
 const targets = Array.from({ length: items }, (_, i) => ({
-  size: 25 + i * 25, // in vh units
+  size: 25 + i * 25,
   opacity: 1
 }))
 
 const initialState = {
-  size: 25 // vh
+  size: 25
 }
 
 onMounted(() => {
   if (!section.value || !circles.value.length) return
 
-  // Create timeline with ScrollTrigger
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section.value,
@@ -32,11 +31,9 @@ onMounted(() => {
     }
   })
 
-  // Animate each circle with will-change for GPU acceleration
   circles.value.forEach((el, i) => {
     if (!el) return
 
-    // Set initial state (all start small)
     gsap.set(el, {
       width: `${initialState.size}vw`,
       height: `${initialState.size}vw`,
@@ -44,7 +41,6 @@ onMounted(() => {
       willChange: 'width, height'
     })
 
-    // Animate to target state with stagger
     tl.to(el, {
       width: `${targets[i].size}vw`,
       height: `${targets[i].size}vw`,

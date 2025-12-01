@@ -10,7 +10,6 @@ const address = ref(null)
 onMounted(() => {
   const items = address.value.querySelectorAll('a')
 
-  // First item: translate -50% to 50% horizontally
   gsap.fromTo(items[0],
     { x: '-12.5%' },
     {
@@ -24,7 +23,6 @@ onMounted(() => {
     }
   )
 
-  // Second item: translate 50% to -50% horizontally
   gsap.fromTo(items[1],
     { x: '12.5%' },
     {
@@ -44,12 +42,12 @@ onMounted(() => {
   <address ref="address">
     <ul>
         <li>
-            <a href="mailto:hello@frvncois.com" class="full-link">
+            <a href="mailto:hello@frvncois.com">
               <h4>hello@frvncois.com</h4><h4>hello@frvncois.com</h4><h4>hello@frvncois.com</h4><h4>hello@frvncois.com</h4><h4>hello@frvncois.com</h4>
             </a>
         </li>
         <li>
-            <a href="tel:+14389237640" class="full-link">
+            <a href="tel:+14389237640">
               <h4>438 923 7640</h4><h4>438 923 7640</h4><h4>438 923 7640</h4><h4>438 923 7640</h4><h4>438 923 7640</h4>
             </a>
         </li>
@@ -85,7 +83,7 @@ ul {
       transform: rotate(1deg);
       z-index: 1;
     }
-    > a.full-link {
+    > a{
       display: flex;
       justify-content: center;
       gap: var(--space-md);
@@ -103,7 +101,6 @@ ul {
         content: '→';
         opacity: 0;
         margin-left: var(--space-small);
-        transition: opacity var(--transition-base) ease;
       }
     }
     &:hover h4::after {

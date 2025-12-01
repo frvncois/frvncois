@@ -51,7 +51,7 @@ const handleClick = () => {
 <style scoped>
 .shape {
   position: absolute;
-  width: 33.5vw;
+  width: 50vw;
   aspect-ratio: 1;
   inset: 0;
   display: flex;
