@@ -179,7 +179,9 @@ article {
     display: grid;
     grid-template-columns: var(--grid-layout);
     gap: var(--space-base);
+    border-top: 1px solid var(--is-foreground);
     > li {
+    padding-top: var(--space-base);
       position: relative;
       img, video {
         position: absolute;
