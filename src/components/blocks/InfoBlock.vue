@@ -15,8 +15,12 @@ import info from '@/data/info.js'
         />
       </li>
       <li>
-        <ListLayout 
-          intro="Sites vitrines, boutiques en ligne, microsites et plateformes sur mesure pour agences, marques et entreprises. Design, UX/UI, développement frontend, intégration de CMS, architecture headless, animations, API, contenu et déploiement — tout est pris en charge du concept à la mise en ligne. J’interviens aussi sur des apps et produits numériques pour offrir des solutions rapides, performantes et parfaitement alignées avec les objectifs du projet."
+        <ListLayout
+          :intro="`Sites vitrines, boutiques en ligne, microsites et plateformes sur mesure pour agences, marques et entreprises.
+
+Design, UX/UI, développement frontend, intégration de CMS, architecture headless, animations, API, contenu et déploiement — tout est pris en charge du concept à la mise en ligne.
+
+J'interviens aussi sur des apps et produits numériques pour offrir des solutions rapides, performantes et parfaitement alignées avec les objectifs du projet.`"
           :items="info"
         />
       </li>

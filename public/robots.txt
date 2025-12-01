@@ -1,0 +1,7 @@
+# robots.txt for frvncois.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://frvncois.com/sitemap.xml

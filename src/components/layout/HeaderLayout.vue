@@ -2,15 +2,19 @@
 defineProps({
   h1: String,
   h2: String,
-  h3: String
+  h3: String,
+  isMainHeading: {
+    type: Boolean,
+    default: false
+  }
 })
 </script>
 
 <template>
     <ul>
-        <li><h1>{{ h1 }}</h1></li>
-        <li><h2>{{ h2 }}</h2></li>
-        <li><h3>{{ h3 }}</h3></li>
+        <li><h1 v-if="isMainHeading">{{ h1 }}</h1><span v-else class="h1">{{ h1 }}</span></li>
+        <li><span class="h2">{{ h2 }}</span></li>
+        <li><span class="h3">{{ h3 }}</span></li>
     </ul>
 </template>
 

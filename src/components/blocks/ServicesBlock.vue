@@ -77,43 +77,44 @@ onMounted(() => {
     }
   })
 
-  // Show services title at 50% progress
-  tl.to(servicesTitle, {
-    display: 'inline',
-    ease: 'none',
-  }, 0.5)
-
+  // Card animations start immediately (position 0)
   if (isMobile) {
     tl.to(cards[0], {
       rotation: -10,
       y: '-33.33vh',
       ease: 'none',
-    }, '<')
+    }, 0)
     .to(cards[1], {
       rotation: 5,
       ease: 'none',
-    }, '<')
+    }, 0)
     .to(cards[2], {
       rotation: 0,
       y: '33.33vh',
       ease: 'none',
-    }, '<')
+    }, 0)
   } else {
     tl.to(cards[0], {
       rotation: -10,
       x: '-33.33vw',
       ease: 'none',
-    }, '<')
+    }, 0)
     .to(cards[1], {
       rotation: 5,
       ease: 'none',
-    }, '<')
+    }, 0)
     .to(cards[2], {
       rotation: 0,
       x: '33.33vw',
       ease: 'none',
-    }, '<')
+    }, 0)
   }
+
+  // Show services title at 50% progress
+  tl.to(servicesTitle, {
+    display: 'inline',
+    ease: 'none',
+  }, 0.5)
 })
 </script>
 

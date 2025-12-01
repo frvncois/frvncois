@@ -108,7 +108,7 @@ export default [
   },
 
   {
-    title: "Tapelab",
+    title: "4track",
     category: "Product design, Développement",
     year: 2025,
     frontend: ["Swift"],
@@ -118,10 +118,10 @@ export default [
     website: "",
     status: "décembre 2025",
     intro:
-      "Portastudio iOS permettant d'enregistrer sur 4 pistes, mixer, ajouter des effets et exporter des démos. Pensé pour capturer instantanément des idées musicales, Tapelab offre un workflow simple, mobile et intuitif pour musiciens en mouvement.",
+      "Portastudio iOS permettant d'enregistrer sur 4 pistes, mixer, ajouter des effets et exporter des démos. Pensé pour capturer instantanément des idées musicales, 4track offre un workflow simple, mobile et intuitif pour musiciens en mouvement.",
     description:
       "Design produit, développement iOS natif et écosystème web complémentaire. App en Swift/SwiftUI avec moteur audio maison (4 pistes, effets, mix, export). Travail sur la cohérence de marque, l’ergonomie mobile et la performance audio en temps réel. Distribution via App Store et pages marketing hébergées sur Vercel.",
-    images: ["/assets/tapelab/01.png"]
+    images: ["/assets/4track/01.png"]
   },
 
   {

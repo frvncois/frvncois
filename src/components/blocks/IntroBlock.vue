@@ -19,7 +19,7 @@ import HeaderLayout from '@/components/layout/HeaderLayout.vue';
           <li>
             <ContentLayout 
               p1="Solutions web spécialisées"
-              p2="Développeur web & UX/UI à Montréal, j’aide depuis 2012 agences, marques et entreprises à créer des sites vitrines, eCommerce et plateformes sur mesure. J’assure tout le cycle — design, UX, développement, intégrations et déploiement — pour livrer des projets rapides, fiables et alignés avec vos objectifs."
+              p2="Développeur web & UX/UI Senior à Montréal, j’aide depuis 2012 agences, marques et entreprises à créer des sites vitrines, eCommerce et plateformes sur mesure. J’assure tout le cycle — design, UX, développement, intégrations et déploiement — pour livrer des projets rapides, fiables et alignés avec vos objectifs."
             />
         </li>
     </ul>

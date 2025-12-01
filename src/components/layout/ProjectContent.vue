@@ -123,11 +123,12 @@ onBeforeUnmount(() => {
           v-for="(imageSrc, index) in project.images"
           :key="index"
           :src="imageSrc"
+          :alt="`${project.title} - Capture ${index + 1}`"
           :style="{ display: currentImageIndex === index ? 'block' : 'none' }"
         />
       </li>
       <li v-else>
-        <img src="@/assets/img/demo.png"/>
+        <img src="@/assets/img/demo.png" alt="Apercu du projet"/>
       </li>
       <li v-if="project.year">
             <h2>{{ project.year }}</h2>

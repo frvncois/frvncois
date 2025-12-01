@@ -49,6 +49,7 @@ ul {
       grid-column: span 4;
       & p {
         max-width: var(--content-medium);
+        white-space: pre-line;
       }
     }
     &:not(:first-child) {
