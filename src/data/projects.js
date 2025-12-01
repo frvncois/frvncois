@@ -214,7 +214,7 @@ export default [
     frontend: ["Custom frontend"],
     backend: ["Laravel", "WordPress"],
     animations: [],
-    deploy: "github",
+    deploy: "Github",
     website: "https://jjacques.ca",
     intro:
       "Bar-restaurant 18+ offrant une expérience immersive et sensorielle. Un lieu intime où textures, couleurs et ambiance créent un espace hors du temps, idéal pour des soirées mémorables et des moments à savourer entre adultes.",
