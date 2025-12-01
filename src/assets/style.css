@@ -57,11 +57,6 @@
   --transition-fast: 0.2s;
   --transition-base: 0.25s;
   --transition-slow: 0.3s;
-
-  /* Component sizes */
-  --icon-size: 1.5em;
-  --menu-min-width: 150px;
-  --blur-amount: 10px;
 }
 
 /* DARK THEME */
