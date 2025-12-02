@@ -133,7 +133,7 @@ export default [
     backend: ["Node JS"],
     animations: [],
     deploy: "Firebase",
-    website: "https://inverse-uqam.ca",
+    website: "",
     intro:
       "Répertoire collaboratif des infrastructures vertes urbaines du Québec, soutenu par la Chaire de recherche de l'UQAM. Une ressource publique conçue pour documenter, valoriser et rendre accessibles les projets verts à travers la province.",
     description:
