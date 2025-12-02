@@ -115,8 +115,8 @@ export default [
     backend: [],
     animations: [],
     deploy: "AppStore",
-    website: "",
-    status: "décembre 2025",
+    website: "https://4track.app",
+    status: "",
     intro:
       "Portastudio iOS permettant d'enregistrer sur 4 pistes, mixer, ajouter des effets et exporter des démos. Pensé pour capturer instantanément des idées musicales, 4track offre un workflow simple, mobile et intuitif pour musiciens en mouvement.",
     description:
