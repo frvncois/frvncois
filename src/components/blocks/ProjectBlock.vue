@@ -8,7 +8,7 @@ import HeaderLayout from '@/components/layout/HeaderLayout.vue';
         <ul>
             <li>
                 <HeaderLayout 
-                    h1="Projets" 
+                    h1="Projects" 
                     h2="Selection" 
                     h3="2023/24/25" 
                 />

@@ -131,7 +131,7 @@ onBeforeUnmount(() => {
             <p>{{ project.title }}</p>
       </li>
       <li v-if="project.agency">
-            <h3>Agence</h3>
+            <h3>Agency</h3>
             <p>{{ project.agency }}</p>
       </li>
       <li v-if="project.design">
@@ -155,14 +155,14 @@ onBeforeUnmount(() => {
             <p>{{ project.animations.join(', ') }}</p>
       </li>
       <li v-if="project.deploy">
-            <h3>Deploiement</h3>
+            <h3>Deployment</h3>
             <p>{{ project.deploy }}</p>
       </li>
       <li v-if="project.website">
-            <a :href="project.website" target="_blank" rel="noopener noreferrer">Voir le site →</a>
+            <a :href="project.website" target="_blank" rel="noopener noreferrer">View website →</a>
       </li>
       <li v-if="project.status && !project.website">
-            <p>Lancement {{ project.status }}</p>
+            <p>Launching {{ project.status }}</p>
       </li>
     </ul>
   </article>

@@ -10,8 +10,8 @@ import HeaderLayout from '@/components/layout/HeaderLayout.vue';
                 <header>
                     <HeaderLayout
                         h1="Francois Lemieux"
-                        h2="Developpement + UX/UI"
-                        h3="Depuis 2012"
+                        h2="Development + UX/UI"
+                        h3="Since 2012"
                         :isMainHeading="true"
                     />
                 </header>

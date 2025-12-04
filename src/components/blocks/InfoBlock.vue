@@ -8,17 +8,17 @@ import info from '@/data/info.js'
   <section>
     <ul>
       <li>
-        <HeaderLayout 
-          h1="Francois Lemieux" 
-          h2="Developpement + UX/UI" 
-          h3="Depuis 2012"
+        <HeaderLayout
+          h1="Francois Lemieux"
+          h2="Development + UX/UI"
+          h3="Since 2012"
         />
       </li>
       <li>
         <ListLayout
-          :intro="`Sites vitrines, boutiques en ligne, microsites et plateformes sur mesure pour agences, marques et entreprises.
+          :intro="`Showcase sites, online stores, microsites, and custom platforms for agencies, brands, and businesses.
 
-Design, UX/UI, développement frontend, intégration de CMS, architecture headless, animations, API, contenu et déploiement — tout est pris en charge du concept à la mise en ligne.`"
+Design, UX/UI, frontend development, CMS integration, headless architecture, animations, API, content, and deployment — everything is handled from concept to launch.`"
           :items="info"
         />
       </li>

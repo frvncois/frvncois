@@ -10,16 +10,16 @@ import HeaderLayout from '@/components/layout/HeaderLayout.vue';
             <h4>Design&dev</h4><div><h5><span>based</span> in</h5></div><h6>Montreal</h6>
         </li>
         <li>
-            <HeaderLayout 
-              h1="Francois Lemieux" 
-              h2="Developpement + UX/UI" 
-              h3="Depuis 2012" 
+            <HeaderLayout
+              h1="Francois Lemieux"
+              h2="Development + UX/UI"
+              h3="Since 2012"
             />
           </li>
           <li>
-            <ContentLayout 
-              p1="Solutions web spécialisées"
-              p2="Développeur web & UX/UI Senior à Montréal, j’aide depuis 2012 agences, marques et entreprises à créer des sites vitrines, eCommerce et plateformes sur mesure. J’assure tout le cycle — design, UX, développement, intégrations et déploiement — pour livrer des projets rapides, fiables et alignés avec vos objectifs."
+            <ContentLayout
+              p1="Specialized Web Solutions"
+              p2="Senior Web Developer & UX/UI based in Montreal. Since 2012, I've been helping agencies, brands, and businesses create showcase sites, eCommerce platforms, and custom solutions. I handle the full cycle — design, UX, development, integrations, and deployment — to deliver fast, reliable projects aligned with your goals."
             />
         </li>
     </ul>

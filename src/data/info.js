@@ -19,7 +19,7 @@ export default [
     ]
   },
   {
-    title: "Plateformes",
+    title: "Platforms",
     content: [
       "Strapi::https://strapi.io",
       "Webflow::https://webflow.com",
@@ -28,7 +28,7 @@ export default [
     ]
   },
   {
-    title: "Déploiement",
+    title: "Deployment",
     content: [
       "GitHub::https://github.com",
       "Vercel::https://vercel.com"

@@ -137,8 +137,8 @@ onBeforeUnmount(() => {
         <span>Modules</span>
       </div>
       <li class="card-1" :style="{ zIndex: card1ZIndex }">
-        <h2>Site Vitrine</h2>
-        <h2>Website</h2>
+        <h2>Store front</h2>
+        <h2>Showcase</h2>
         <Shape03 @click="handleCard1Click" />
       </li>
 
