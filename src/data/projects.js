@@ -9,8 +9,7 @@ export default [
     backend: ["Node JS"],
     animations: ["GSAP"],
     deploy: "Vercel",
-    website: "",
-    status: "December 2025",
+    website: "https://off-front.vercel.app",
     intro:
       "Private community of qualified buyers sharing off-market real estate opportunities in Toulouse. Reserved for projects exceeding 1M EUR, this network distributes exclusive, filtered, and fully confidential listings.",
     description:
