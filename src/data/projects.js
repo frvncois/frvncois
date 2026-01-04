@@ -98,11 +98,11 @@ export default [
     animations: [],
     deploy: "Vercel",
     website: "",
-    status: "January 2026",
+    status: "Beta February 2026",
     intro:
       "Minimalist builder for creating elegant, fast, and high-performance microsites. Between landing page and full website, Lands offers a streamlined and flexible solution to publish content in minutes.",
     description:
-      "Product design, front-end development, and complete builder creation. Vue 3 + ShadCN + Tailwind interface, dynamic microsite generation, and modular template system. Development of the builder core (editing, content management, preview, publishing) and integration with the Vercel pipeline and a Cloudflare Worker for instant rendering. Scalable technical foundation designed to accommodate storage, plans, analytics, and a future multi-site mode.",
+      "Product design, front-end development, and complete builder creation. Vue 3 + Tailwind interface, dynamic microsite generation, and modular template system. Development of the builder core (editing, content management, preview, publishing) and integration with the Vercel pipeline and a Cloudflare Worker for instant rendering. Scalable technical foundation designed to accommodate storage, plans, analytics, and a multi-lingual feature.",
     images: ["/assets/lands/01.png"]
   },
 
@@ -223,6 +223,27 @@ export default [
       "/assets/jjacques/01.png",
       "/assets/jjacques/02.png",
       "/assets/jjacques/03.png"
+    ]
+  },
+
+  {
+    title: "Premiere Boisson",
+    category: "Development, Design",
+    year: 2023,
+    cms: "Wordpress",
+    frontend: ["Custom frontend"],
+    backend: ["Laravel", "WordPress"],
+    animations: ["GSAP"],
+    deploy: "Github",
+    website: "https://premiereboisson.com",
+    intro:
+      "Wine consulting and cellar management studio based in Montréal, serving collectors, investors, and hospitality professionals. Premiere Boisson blends expertise, discretion, and experience to support wine projects ranging from private cellars to large-scale events and curated wine journeys.",
+    description:
+      "Design and development of a custom website for Premiere Boisson, built with a Laravel frontend and WordPress CMS for flexible content management. The project focused on translating a high-end wine consultancy universe into a refined digital experience, with emphasis on typography, visual rhythm, and subtle GSAP-powered transitions. Technical optimization, custom integrations, and automated deployment via GitHub ensured a performant, maintainable platform aligned with the brand’s premium positioning.",
+    images: [
+      "/assets/pb/01.png",
+      "/assets/pb/02.png",
+      "/assets/pb/03.png"
     ]
   }
 ]
