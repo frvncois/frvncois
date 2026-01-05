@@ -183,6 +183,27 @@ export default [
       "/assets/lexapien/03.png"
     ]
   },
+    {
+    title: "Dagobert",
+    category: "Development",
+    year: 2024,
+    cms: "Webflow",
+    agency: "Bzoing",
+    design: "",
+    frontend: [],
+    backend: [],
+    animations: [],
+    website: "https://dagobert.ca",
+    intro:
+      "Nightlife venue located in a historic building in Old Quebec, blending classic architecture with a chic, contemporary atmosphere. Le Dagobert is designed for memorable evenings, celebrations, and vibrant social gatherings.",
+    description:
+       "Webflow website development for Le Dagobert, focused on translating the venue’s identity into a clear and impactful digital presence. Integration of structured content sections highlighting the space, atmosphere, and nightlife positioning. Emphasis on visual balance between heritage elements and modern design, responsive layout, CMS configuration for autonomous updates, and performance optimization for a smooth user experience.",
+    images: [
+      "/assets/dag/01.png",
+      "/assets/dag/02.png",
+      "/assets/dag/03.png",
+    ]
+  },
 
   {
     title: "Les enfants terribles",
