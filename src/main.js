@@ -9,6 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import Lenis from 'lenis'
 import { useTheme } from '@/stores/useTheme'
+import { inject } from '@vercel/analytics'
 
 gsap.registerPlugin(Draggable, ScrollTrigger, ScrollToPlugin)
 
@@ -16,6 +17,9 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.mount('#app')
+
+// Initialize Vercel Web Analytics
+inject()
 
 const lenis = new Lenis({
   duration: 1.2,
