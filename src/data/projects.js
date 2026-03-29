@@ -98,7 +98,7 @@ export default [
     animations: [],
     deploy: "Vercel",
     website: "",
-    status: "Beta February 2026",
+    status: "Beta April 2026",
     intro:
       "Minimalist builder for creating elegant, fast, and high-performance microsites. Between landing page and full website, Lands offers a streamlined and flexible solution to publish content in minutes.",
     description:

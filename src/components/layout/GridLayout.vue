@@ -33,6 +33,9 @@ ul {
     display: grid;
     grid-template-columns: var(--grid-layout);
     margin: 0 var(--space-lg);
+    @media (max-width: 1080px) {
+        margin: 0 var(--space-base);
+    }
     > li {
         background: var(--is-light);
         border-left: var(--border-thin) solid var(--is-muted);

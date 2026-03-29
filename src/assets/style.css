@@ -129,6 +129,10 @@ body {
   font-size: 15px;
   margin: 0 var(--space-lg);
   overflow-x: hidden;
+
+  @media (max-width: 1080px) {
+    margin: 0 var(--space-base);
+  }
 }
 
 html.lenis, html.lenis body {
@@ -160,10 +164,10 @@ ul, li {
   list-style-type: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, span {
   font-size: var(--space-base);
   font-weight: normal;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 a {
